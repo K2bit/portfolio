@@ -1,0 +1,31 @@
+.typing-container {
+    font-family: "Cutive Mono", monospace;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 5em;
+    height: 90vh;
+    display: flex;
+    white-space: pre;
+    justify-content: center; /* horizontal center */
+    align-items: center;     /* vertical center */
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.typing-correct {
+    color: var(--color-dark-2);  
+}
+
+.typing-incorrect {
+    color: var(--color-danger-1);
+}
+
+.typing-empty {
+    color: var(--color-dark-4);
+}
+
+.help-text {
+    display: flex;
+    font-size: 0.2em;
+    color: var(--color-dark-3)
+}
