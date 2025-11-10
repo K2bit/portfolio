@@ -1,19 +1,18 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Home from '../pages/Home';
-import Hero from '../components/Hero/Hero';
 import { motion, AnimatePresence } from 'framer-motion';
+import Home from '../pages/Home';
+import Landing from '../pages/Landing';
 
 export default function AppRoutes() {
 
-  function pageTransition({ distance = 500, duration = 1 } = {}) {
-  return {
-    initial: { opacity: 1, x: distance },
-    animate: { opacity: 1, x: 0 },
-    exit: { opacity: 1, x: -distance },
-    transition: { duration }, 
-  };
-}
-
+  function pageTransition({ distance = 10, duration = 1 } = {}) {
+    return {
+      initial: { opacity: 0, y: distance },
+      animate: { opacity: 1, y: 0 },
+      exit: { opacity: 0, y: -distance },
+      transition: { duration }, 
+    };
+  }
 
   return (
     <>
@@ -24,20 +23,22 @@ export default function AppRoutes() {
                 path={"/"} 
                 element={
                   <motion.div
+                    key="landing"
                     {...pageTransition()}
                   >
-                    <Home/>
+                    <Landing/>
                   </motion.div>
                 }
               />
 
               <Route 
-                path={"/hero"} 
+                path={"/home"} 
                 element={
                   <motion.div
+                    key="home"
                     {...pageTransition()}
                   >
-                    <Hero/>
+                    <Home/>
                   </motion.div>
                 }
               />

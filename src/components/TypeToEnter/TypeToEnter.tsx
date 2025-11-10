@@ -29,6 +29,10 @@ export default function TypeToEnter({text, target, className, helpText, finalHel
         return () => window.removeEventListener("click", focusInput);
     }, []);
 
+    const targetTyped = () => {
+        return typed.toLowerCase() === target.toLowerCase();
+    }
+
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const value = e.target.value;
         setTyped(value.slice(0, target.length)); // limit length
@@ -36,7 +40,7 @@ export default function TypeToEnter({text, target, className, helpText, finalHel
 
     const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
         // if the user pressed enter and they have fully typed the target
-        if (e.key === "Enter" && typed === target) {
+        if (e.key === "Enter" && targetTyped()) {
             onEnter();
         }
     };
@@ -48,7 +52,7 @@ export default function TypeToEnter({text, target, className, helpText, finalHel
                     {text && <motion.span>{text} </motion.span>}
                     {target.split("").map((character, index) => (
                         <span
-                            className={index < typed.length ? typed[index] === character ? "typing-correct" : "typing-incorrect" : "typing-empty"}
+                            className={index < typed.length ? typed[index].toLowerCase() === character.toLowerCase() ? "typing-correct" : "typing-incorrect" : "typing-empty"}
                             key={index}
                             >
                             {character}
@@ -68,9 +72,17 @@ export default function TypeToEnter({text, target, className, helpText, finalHel
                         pointerEvents: "none"
                     }}
                 />
-                {helpText && <motion.p layout className="help-text">{helpText}</motion.p>}
+                {helpText && !targetTyped() && 
+                    <motion.p 
+                        layout 
+                        exit={{opacity: 0}}
+                        className="help-text"
+                    >
+                        {helpText}
+                    </motion.p>
+                }
                 
-                {finalHelp && typed === target && 
+                {finalHelp && targetTyped() && 
                     <motion.p 
                         layout 
                         key="final-help-text" 

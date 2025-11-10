@@ -1,31 +1,33 @@
 import TypeToEnter from "../TypeToEnter/TypeToEnter";
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
 import "./Hero.css";
+import useAppNavigation from "../../hooks/useAppNavigation";
 
 export default function Hero() {
 
-    function enterCurious() {
-        alert("Easter Egg");
-    }
+    const { navPersonal } = useAppNavigation();
+
+    const [helpText, setHelpText] = useState("start typing!");
+
+    useEffect(() => {
+        const timer = setTimeout(() => setHelpText(""), 1500); // hide after 1s
+        return () => clearTimeout(timer); // cleanup if unmounts early
+    }, [setHelpText]);
 
     return (
         <>  
-            <header className="hero-header">
-                <nav>
-                    <button>Skills</button>
-                    <button>Projects</button>
-                    <button>Contact</button>
-                </nav>
-            </header>
             <div className="hero-container">
 
                 <section className="intro-section">
-                    <h1>Kurt Galvez</h1>
                     
-                    <TypeToEnter text={"Stay"} target={"curious."} className={"hero-quote-type"} finalHelp={"enter?"} onEnter={enterCurious} />
+                    <motion.div onHoverStart={() => setHelpText("start typing!")} onHoverEnd={() => setHelpText("")}>
+                        <TypeToEnter text={"Kurt"} target={"Galvez"} className={"hero-quote-type"} helpText={helpText} finalHelp={"enter?"} onEnter={navPersonal} />
+                    </motion.div>
                 </section>
 
-                <section className="about-section">
+                {/* <section className="about-section">
                     
                 </section>
 
@@ -45,7 +47,7 @@ export default function Hero() {
 
                 <section className="contact-section">
 
-                </section>
+                </section> */}
 
             </div>
         </>
