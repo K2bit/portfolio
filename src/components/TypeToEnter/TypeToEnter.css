@@ -27,5 +27,7 @@
 .help-text {
     display: flex;
     font-size: 0.2em;
+    margin: 0;
+    margin-bottom: 5px;
     color: var(--color-dark-3)
 }

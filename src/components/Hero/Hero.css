@@ -1,10 +1,40 @@
+.hero-header {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    display: flex;
+    justify-content: center;
+}
+
 .hero-container {
-    height: 90vh;
     color: var(--color-dark-2);
     display: flex;
-    align-items: center;
     justify-content: center;
     flex-direction: column;
-    max-width: 500px;
+    max-width: 1500px;
     margin: 0 auto;
+    padding: 2em;
 }
+
+.intro-section {
+    height: 50vh;
+    font-size: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-quote {
+    display: inline-flex;
+}
+
+.hero-quote-type {
+    margin-left: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.skills-section {
+    height: 50vh;
+}
+
