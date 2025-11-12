@@ -47,8 +47,8 @@ export default function TypeToEnter({text, target, className, helpText, finalHel
 
     return (
         <AnimatePresence>
-            <motion.div layout className={className ? className : "typing-container"}>
-                <motion.div layout>
+            <motion.div layout key="typing-container" className={className ? className : "typing-container"}>
+                <motion.div layout key="type-to-enter">
                     {text && <motion.span>{text} </motion.span>}
                     {target.split("").map((character, index) => (
                         <span
@@ -72,10 +72,15 @@ export default function TypeToEnter({text, target, className, helpText, finalHel
                         pointerEvents: "none"
                     }}
                 />
+                <AnimatePresence mode="wait">
                 {helpText && !targetTyped() && 
                     <motion.p 
                         layout 
-                        exit={{opacity: 0}}
+                        key="help-text"
+                        initial={{opacity: 0, y: -5}}
+                        animate={{opacity: 1, y: 0}}
+                        exit={{opacity: 0, y: 5}}
+                        transition={{duration: 0.3}}
                         className="help-text"
                     >
                         {helpText}
@@ -89,12 +94,12 @@ export default function TypeToEnter({text, target, className, helpText, finalHel
                         initial={{opacity: 0}} 
                         animate={{opacity: 1}} 
                         exit={{opacity: 0}} 
-                        transition={{duration: 0.5}}
+                        transition={{duration: 0.3}}
                         className="help-text"
                     >
                             {finalHelp}
                     </motion.p>}
-                
+                </AnimatePresence>
             </motion.div>
         </AnimatePresence>
     );

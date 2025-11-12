@@ -2,10 +2,10 @@ import { motion, useAnimation } from "framer-motion";
 
 interface NavLinkProps {
     children: string,
-    nav: () => void
+    href?: string,
 }
 
-export default function NavLink({children, nav}:NavLinkProps) {
+export default function NavLink({children, href}:NavLinkProps) {
 
     const controls = useAnimation();
 
@@ -14,9 +14,9 @@ export default function NavLink({children, nav}:NavLinkProps) {
 
     return (
         <motion.a
-            onHoverStart={() => controls.start({ opacity: 1})}
-            onHoverEnd={() => controls.start({ opacity: 0, x: 5 })}
-            onClick={nav}
+            onHoverStart={() => controls.start({ opacity: 1 })}
+            onHoverEnd={() => controls.start({ opacity: 0 })}
+            href={href}
             >
                 <motion.span
                     initial={{ opacity: 0 }}
