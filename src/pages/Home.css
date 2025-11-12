@@ -69,7 +69,7 @@
 .experience-title {
     font-size: 8rem;
     margin: 0;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 .experience-content h3 {
@@ -79,10 +79,10 @@
 
 .experience-content-item {
     margin-left: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     padding-left: 30px;
     padding-right: 30px;
-    padding-bottom: 2.3rem;
+    padding-bottom: 30px;
     border-radius: 20px;
     border-bottom: 2px solid var(--color-dark-3);
 }
@@ -95,12 +95,16 @@
     margin: 0;
 }
 
+.experience-content-company {
+    margin-bottom: 30px;
+}
+
 .experience-content ul {
     margin: 0;
     display: flex;
     flex-wrap: wrap;
     gap: 50px;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
 }
 
 .experience-content li {

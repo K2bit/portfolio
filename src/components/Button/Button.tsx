@@ -14,7 +14,7 @@ export default function Button({children, onClick}:ButtonProps) {
         whileHover: {
             scale: 1,
             transition: {
-                staggerChildren: 0.05
+                staggerChildren: 0.03
             },
         },
         whileTap: {

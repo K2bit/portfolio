@@ -80,9 +80,11 @@ export default function Home() {
                         className="experience-content-item"
                     >
                         <div className="experience-content-header">
-                            <h3>(01) Software Developer, EnLogin</h3>
+                            <h3>(01) Software Developer</h3>
                             <h2>SEPT 2025 - CURRENT</h2>
                         </div>
+                        <h2 className="experience-content-company">EnLogin</h2>
+                        
                         <ul>
                             <li>Full-stack Web Development</li>
                             <li>REST APIs</li>
@@ -96,9 +98,10 @@ export default function Home() {
                         className="experience-content-item"
                     >
                         <div className="experience-content-header">
-                            <h3>(02) Programmer/Analyst, Agriculture and Agri-Food Canada (AAFC)</h3>
+                            <h3>(02) Programmer/Analyst</h3>
                             <h2>MAY 2024 - AUG 2024</h2>
                         </div>
+                        <h2 className="experience-content-company">Agriculture and Agri-Food Canada (AAFC)</h2>
                         <ul>
                             <li>Back-end Web Development</li>
                             <li>REST APIs</li>
@@ -113,9 +116,10 @@ export default function Home() {
                         className="experience-content-item"
                     >
                         <div className="experience-content-header">
-                            <h3>(03) Photo Lab Specialist, London Drugs</h3>
+                            <h3>(03) Photo Lab Specialist</h3>
                             <h2>SEPT 2022 - SEPT 2025</h2>
                         </div>
+                        <h2 className="experience-content-company">London Drugs</h2>
                         <ul>
                             <li>Customer Service</li>
                             <li>Quality Assurance</li>
