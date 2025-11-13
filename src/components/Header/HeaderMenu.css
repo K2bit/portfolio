@@ -1,0 +1,30 @@
+.header-menu-container {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.header-menu-list {
+    list-style: none;
+    font-size: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.header-menu-list li {
+    margin-bottom: 30px;
+}
+
+.header-menu-link {
+    text-decoration: none;
+    color: var(--color-light-2);
+}
+
+.header-menu-secret {
+    font-weight: 600;
+    color: var(--color-dark-3);
+}
+

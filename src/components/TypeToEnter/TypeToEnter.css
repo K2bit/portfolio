@@ -1,7 +1,7 @@
 .typing-container {
     font-weight: bold;
     font-style: normal;
-    font-size: clamp(40px, 7vw, 200px);
+    font-size: clamp(2rem, 10vw + 1rem, 5rem);
     height: 90vh;
     display: flex;
     white-space: pre;
@@ -24,7 +24,7 @@
 
 .help-text {
     display: flex;
-    font-size: clamp(12px, 1vw, 90px);
+    font-size: 1.25rem;
     margin: 0;
     margin-bottom: 5px;
     color: var(--color-dark-4)

@@ -58,7 +58,6 @@ export default function Home() {
                     <motion.div className="about-content">
                         <motion.p>I’m a passionate computer science student with a strong interest in software development, problem-solving, and building intuitive digital experiences. I enjoy exploring new technologies, collaborating on projects, and turning ideas into functional solutions.</motion.p>
                         <motion.p>People often describe me as collaborative, patient and reliable.</motion.p>
-                        <Button>Download Resume</Button>
                     </motion.div>
                 </div>
             </section>
@@ -127,34 +126,6 @@ export default function Home() {
                     </motion.div>
                 </motion.div>
             </motion.section>
-
-
-            <section id="projects">
-                <h1>Projects</h1>
-
-                <div>
-                    <h3>Android Calendar</h3>
-                    <h4>Android calendar application in Java with a 3-tier architecture design</h4>
-                    <ul>
-                        <li>Applied Agile methodology for iterative development, incorporating feedback after each sprint to refine
-features.</li>
-                        <li>Leveraged SOLID principles to enhance code flexibility, maintainability, and readability.</li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h3>Library Database (AAFC training project)</h3>
-                    <h4>A RESTful web application that connects to a relational database containing authors, books and genres.</h4>
-                    <ul>
-                        <li>Implemented full-stack development using Grails and Vue, building CRUD operations and enabling
-seamless frontend–backend integration.</li>
-                    </ul>
-                </div>
-            </section>
-
-            <section id="contact">
-                <h1>Let's connect!</h1>
-            </section>
             </div>
         </>
     )

@@ -24,8 +24,8 @@ html {
 }
 
 section {
-    scroll-margin-top: 20px;
-    padding-bottom: clamp(30px, 5vw, 50px);
+    scroll-margin-top: 10vh;
+    padding-bottom: clamp(20px, 2vh, 30px);
 }
 
 body {
@@ -39,7 +39,7 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-    font-size: clamp(50px, 7vw, 150px);
+    font-size: clamp(2rem, 7vw, 5rem);
 }
 
 img {
@@ -48,7 +48,7 @@ img {
 }
 
 button {
-    font-size: clamp(12px, 1vw, 30px);
+    font-size: clamp(1rem, 1vw, 1.5rem);
     font-weight: 500;
     color: var(--color-dark-2);
     border: 3px solid var(--color-light-2);

@@ -11,6 +11,7 @@
     right: 0;
     mix-blend-mode: difference;
     color: var(--color-light-1);
+    font-size: clamp(1rem, 1vw, 1.75rem);
 }
 
 .header-nav {
@@ -29,4 +30,19 @@
 .header-nav div {
   display: inline-flex;
   gap: 50px;
+}
+
+.header-nav .header-nav-action-menu {
+  display: none;
+}
+
+@media (max-width: 768px) {
+
+  .header-nav .header-nav-action {
+    display: none;
+  }
+
+  .header-nav .header-nav-action-menu {
+    display: inline-flex;
+  }
 }
