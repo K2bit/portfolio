@@ -2,6 +2,8 @@ import Drawer from '@mui/material/Drawer';
 import NavLink from './NavLink';
 import useAppNavigation from '../../hooks/useAppNavigation';
 
+import "./HeaderMenu.css";
+
 interface HeaderMenuProps {
     open: boolean,
     onClose: () => void,
