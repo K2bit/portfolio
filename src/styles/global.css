@@ -24,7 +24,8 @@ html {
 }
 
 section {
-    scroll-margin-top: 50px;
+    scroll-margin-top: 20px;
+    padding-bottom: clamp(30px, 5vw, 50px);
 }
 
 body {
@@ -37,13 +38,17 @@ h1, h2, h3, h4 {
     margin: 0;
 }
 
+h1 {
+    font-size: clamp(50px, 7vw, 150px);
+}
+
 img {
     max-width: 1000px;
     border-radius: 2px;
 }
 
 button {
-    font-size: 1em;
+    font-size: clamp(12px, 1vw, 30px);
     font-weight: 500;
     color: var(--color-dark-2);
     border: 3px solid var(--color-light-2);
@@ -52,11 +57,3 @@ button {
     padding: 10px;
     transition: all 0.3s;
 }
-
-
-/* Global classes */
-.full-height {
-    padding-top: 10px;
-    min-height: 100vh;
-}
-

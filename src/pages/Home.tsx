@@ -51,29 +51,27 @@ export default function Home() {
                 </motion.div>
             </section>
 
-            <section id="about" className="about-section full-height">
+            <section id="about" className="about-section">
                 <motion.h1 className="about-title">About me</motion.h1>
                 <div className="about-grid">
                     <motion.img className="portrait-image" src={portrait}/>
                     <motion.div className="about-content">
-                        <motion.p></motion.p>
                         <motion.p>I’m a passionate computer science student with a strong interest in software development, problem-solving, and building intuitive digital experiences. I enjoy exploring new technologies, collaborating on projects, and turning ideas into functional solutions.</motion.p>
                         <motion.p>People often describe me as collaborative, patient and reliable.</motion.p>
                         <Button>Download Resume</Button>
-                        
                     </motion.div>
                 </div>
             </section>
 
-            <motion.section id="experience" className="experience-section full-height">
-                <motion.h2 className="experience-title">Experience</motion.h2>
+            <motion.section id="experience" className="experience-section">
+                <motion.h1 className="experience-title">Experience</motion.h1>
 
                 <motion.div 
                     variants={containerVariants}
                     className="experience-content"
                     initial="hidden"
                     whileInView="show"
-                    viewport={{once: true, amount: 0.5}}
+                    viewport={{once: true, amount: 0.2}}
                 >
                     <motion.div 
                         variants={itemVariants}
@@ -131,8 +129,8 @@ export default function Home() {
             </motion.section>
 
 
-            <section id="projects" className="full-height">
-                <h2>Projects</h2>
+            <section id="projects">
+                <h1>Projects</h1>
 
                 <div>
                     <h3>Android Calendar</h3>
@@ -154,7 +152,7 @@ seamless frontend–backend integration.</li>
                 </div>
             </section>
 
-            <section id="contact" className="full-height">
+            <section id="contact">
                 <h1>Let's connect!</h1>
             </section>
             </div>

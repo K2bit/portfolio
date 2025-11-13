@@ -3,9 +3,10 @@ import { motion } from "framer-motion";
 interface ButtonProps {
     children?: string,
     onClick?: () => void,
+    className?: string,
 }
 
-export default function Button({children, onClick}:ButtonProps) {
+export default function Button({children, onClick, className}:ButtonProps) {
 
     const parentVariant = {
         beforeHover: {
@@ -43,6 +44,7 @@ export default function Button({children, onClick}:ButtonProps) {
                 whileHover="whileHover"
                 whileTap="whileTap"
                 onClick={onClick}
+                className={className}
             > 
                 {children?.split("").map((char, i) => (
                 <motion.span
