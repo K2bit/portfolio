@@ -1,14 +1,16 @@
-#root {
+/* Global styling */
+:root {
     --color-primary-1: #1B9AAA; 
+    --color-secondary-1: #FFE66D;
 
     --color-light-1: white;
-    --color-light-2: #F5F1E3;
+    --color-light-2: #f5f1e3;
     --color-light-3: #DDDBCB;
 
     --color-dark-1: black;
-    --color-dark-2: rgb(35, 35, 35);
-    --color-dark-3: rgb(120, 120, 120);
-    --color-dark-4: rgb(190, 190, 190);
+    --color-dark-2: #0f1112;
+    --color-dark-3: rgb(41, 41, 41);
+    --color-dark-4: rgb(120, 120, 120);
 
     --color-danger-1: rgb(223, 51, 51);
 }
@@ -17,9 +19,44 @@ html {
     font-family: "Livvic", sans-serif;
     font-weight: 400;
     font-style: normal;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+section {
+    scroll-margin-top: 50px;
 }
 
 body {
-    background-color: var(--color-light-2);
+    margin: 0;
+    color: var(--color-light-2);
+    background-color: var(--color-dark-2);
+}
+
+h1, h2, h3, h4 {
     margin: 0;
 }
+
+img {
+    max-width: 1000px;
+    border-radius: 2px;
+}
+
+button {
+    font-size: 1em;
+    font-weight: 500;
+    color: var(--color-dark-2);
+    border: 3px solid var(--color-light-2);
+    background-color: var(--color-light-2);
+    border-radius: 5px;
+    padding: 10px;
+    transition: all 0.3s;
+}
+
+
+/* Global classes */
+.full-height {
+    padding-top: 10px;
+    min-height: 100vh;
+}
+
