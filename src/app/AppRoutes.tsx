@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import Home from '../pages/Home';
 import Landing from '../pages/Landing';
@@ -18,7 +18,7 @@ export default function AppRoutes() {
   return (
     <>
       <AnimatePresence mode="popLayout">
-        <BrowserRouter>
+        
           <Routes>
               <Route 
                 path={"/"} 
@@ -56,7 +56,7 @@ export default function AppRoutes() {
                 }
               />
           </Routes>
-        </BrowserRouter>
+        
       </AnimatePresence>
     </>
   )
