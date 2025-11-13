@@ -69,6 +69,8 @@
 
 .experience-content h2 {
     font-size: clamp(1.25rem, 1.5vw, 1.75rem);
+    filter: brightness(0.6);
+    font-weight: 500;
 }
 
 .experience-content-item {

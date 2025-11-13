@@ -1,7 +1,6 @@
 .header-menu-container {
-    padding-top: 50px;
-    padding-bottom: 50px;
-    height: 100vh;
+    padding-top: 10%;
+    height: 90%;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
