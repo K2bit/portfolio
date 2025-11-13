@@ -7,7 +7,6 @@ import portrait from "../assets/portrait-2.jpg";
 import Header from '../components/Header/Header';
 
 import "./Home.css";
-import Button from "../components/Button/Button";
 
 export default function Home() {
 
