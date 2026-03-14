@@ -4,6 +4,8 @@ This is my personal website showcasing my work experience so far :).
 
 The website is responsive and supports both desktop and mobile devices.
 
+Current link: https://k2bit.github.io/portfolio/
+
 ## Tech stack
 
 TypeScript, HTML, CSS and React.
